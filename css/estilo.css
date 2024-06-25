@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+body {
+    margin: auto;
+    background-color: #F4F6F8;
+}
+
+nav.menu {
+    width: 235px;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+.menu.active {
+    width: 55px;
+}
+
+div.logo {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: #D6E0EA;
+    transition: height 0.5s;
+}
+
+div.logo img {
+    width: 150px;
+    transition: width 0.5s;
+}
+
+.menu.active div.logo {
+    height: 55px;
+}
+
+.menu.active div.logo img {
+    width: 40px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 20px;
+}
+
+li.item_menu a {
+    color: #031b74;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 45px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+li.item_menu a .material-symbols-outlined {
+    font-size: 25px;    
+}
+
+li.item_menu a .text {
+    margin-left: 10px;
+    margin-right: 5px ;
+}
+
+li.item_menu:hover {
+    background-color: #D7E6F3;
+    transition: 0.5s;
+    padding-top: 3px;
+}
+
+.main {
+    margin-left: 235px;
+    padding: 20px;
+}
+
+.menu.active + .main {
+    margin-left: 55px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.btn_menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn_menu .material-symbols-outlined {
+    font-size: 35px;
+    color: #031b74;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.perfil .material-symbols-outlined {
+    width: 50px;
+    font-size: 35px;
+}
+
+.perfil .text {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    nav.menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .menu.active + .main {
+        margin-left: 0;
+    }
+}
