@@ -116,6 +116,8 @@ li.item_menu:hover {
     font-size: 20px;
 }
 
+
+
 @media (max-width: 768px) {
     nav.menu {
         display: none;
