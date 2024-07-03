@@ -11,6 +11,7 @@ nav.menu {
     overflow: hidden;
     background-color: #ffffff;
     transition: 0.5s;
+    z-index: 1000;
 }
 
 .menu.active {
@@ -22,7 +23,7 @@ div.logo {
     justify-content: center;
     height: 100px;
     background-color: #D6E0EA;
-    transition: height 0.5s;
+    transition:  0.5s;
 }
 
 div.logo img {
@@ -74,6 +75,7 @@ li.item_menu:hover {
 .main {
     margin-left: 235px;
     padding: 20px;
+    transition : 0.5s;
 }
 
 .menu.active + .main {
@@ -116,6 +118,10 @@ li.item_menu:hover {
     font-size: 20px;
 }
 
+.chart-container {
+    width: 500px; 
+    margin: auto;
+}
 
 
 @media (max-width: 768px) {
