@@ -1,3 +1,4 @@
+// menu
 document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.querySelector('.btn_menu');
     const menu = document.querySelector('nav.menu');
@@ -7,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.toggle('active');
         mainContent.classList.toggle('active');
     });
+
+    //  tarefas e grafico
 
     const taskForm = document.getElementById('taskForm');
     const taskInput = document.getElementById('taskInput');
@@ -62,4 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
         chart.data.datasets[0].data[1] = tasks.length - completedTasks;
         chart.update();
     }
+
+    
 });

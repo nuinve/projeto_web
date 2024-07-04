@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />      
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <h2>Cadastro</h2>
+
+        <form id="registerForm">
+            <div class="mb-3">
+                <label for="registerName" class="form-label">Nome de usuario</label>
+                <input type="text" class="form-control" id="registerName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="registerEmail" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="registerPassword" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="registerPassword" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+
+        
+            localStorage.setItem('isRegistered', 'true');
+            localStorage.setItem('userName', name);
+
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+</html>

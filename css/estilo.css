@@ -122,7 +122,9 @@ li.item_menu:hover {
     width: 500px; 
     margin: auto;
 }
-
+.btn-primary{
+    background-color: #4862BC;
+}
 
 @media (max-width: 768px) {
     nav.menu {
