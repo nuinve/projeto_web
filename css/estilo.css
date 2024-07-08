@@ -126,6 +126,13 @@ li.item_menu:hover {
     background-color: #4862BC;
 }
 
+.form-check-input{
+    background-color: #e6ebf0;
+    border: 1px solid #b9d2f3;
+    cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     nav.menu {
         display: none;

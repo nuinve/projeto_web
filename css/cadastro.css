@@ -1,0 +1,143 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.formulario {
+    height: 100%;
+    display: flex;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #9ea3c2fb;
+    flex-direction: row;
+}
+
+.left-section {  
+    flex: 1;          
+    background-color: #ffffff;
+    color: #234483;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.right-section {    
+    flex: 1;
+    background-color: #4861bcd2;
+    color: #f7f7f7;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    border-left: 2px solid #ffffff;
+}
+
+.logo {
+    width: 200px;
+    background-color: #d9e4f862;
+    border-radius: 20px;
+}
+
+.form-container {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;    
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #89a9ca;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #fdfdfd;
+    color: #4862BC;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .formulario {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        flex: none;
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #ffffff;
+    }
+
+    .left-section {
+        padding: 20px;
+    }
+
+    .right-section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .form-control {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
