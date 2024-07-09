@@ -1,21 +1,18 @@
 // cadastro
 document.addEventListener("DOMContentLoaded", function() {
-    
     const isRegistered = localStorage.getItem('isRegistered');
-
-        if (!isRegistered) {
-            window.location.href = 'cadastro.html';
-            return;
+    if (!isRegistered) {
+        window.location.href = 'cadastro.html';
+        return;
     }
 
     // Menu 
     const menuBtn = document.querySelector('.btn_menu');
     const menu = document.querySelector('nav.menu');
     const mainContent = document.querySelector('.main');
-
-        menuBtn.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            mainContent.classList.toggle('active');
+    menuBtn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        mainContent.classList.toggle('active');
     });
 
     // Tarefas e gráfico
@@ -76,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // verificação cad.
-
 document.getElementById('cadastro').addEventListener('submit', function(e) {
     e.preventDefault();
     const nome = document.getElementById('nome').value;
