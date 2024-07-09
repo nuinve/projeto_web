@@ -12,52 +12,34 @@
     <script src="js/codigo.js" defer></script>
 </head>
 <body>
-    <nav class="menu">
-        <header class="menu">
-            <div class="logo">
-                <img src="img/logo.svg" alt="">
-            </div>
-        </header>
-        <ul>
-            <li class="item_menu">
-                <a href="index.html">
-                    <span class="material-symbols-outlined">home</span>
-                    <span class="text">Home</span>
-                </a>
-            </li>            
-            
-            <li class="item_menu">
-                <a href="cadastro.html">
-                    <span class="material-symbols-outlined">logout</span>
-                    <span class="text">Sair</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="main">
-        <div class="header">
-            <div class="btn_menu">
-                <span class="material-symbols-outlined">menu</span>
-            </div>
-            <div class="perfil">
-                <span class="material-symbols-outlined">account_circle</span>                
+    <div class="formulario">
+        <div class="left-section">
+            <img src="img/logo.svg" class="logo mb-4">
+            <h1>Bem-vindo!</h1>
+            <p>Preencha o cadastro para acessar e gerenciar suas tarefas.</p>
+        </div>
+        <div class="right-section">
+            <div class="form-container">
+                <h2 class="text-center mb-5">Cadastro</h2>
+                <form id="cadastro">
+                    <div class="mb-4">
+                        <label for="nome" class="form-label">Nome de usuário</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" required>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="registrarUsuario()">Cadastrar</button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- tarefas e gráfico -->
-    <div class="container mt-4">
-        <h2>Lista de Tarefas</h2>
-        <form id="taskForm">
-            <div class="input-group mb-3 justify-content-center">
-                <input type="text" id="taskInput" class="form-control" placeholder="Nova Tarefa">
-                <button class="btn btn-primary" type="submit">Adicionar</button>
-            </div>
-        </form>
-        <ul id="taskList" class="list-group mb-4"></ul>
-        <h3 class="">Progresso</h3>
-        <div class="chart-container">
-            <canvas id="progressChart"></canvas>
-        </div>
-    </div>
+    
+    
 </body>
 </html>
