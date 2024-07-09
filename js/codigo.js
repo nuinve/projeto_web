@@ -1,16 +1,24 @@
-// menu
+// cadastro
 document.addEventListener("DOMContentLoaded", function() {
+    
+    const isRegistered = localStorage.getItem('isRegistered');
+
+        if (!isRegistered) {
+            window.location.href = 'cadastro.html';
+            return;
+    }
+
+    // Menu 
     const menuBtn = document.querySelector('.btn_menu');
     const menu = document.querySelector('nav.menu');
     const mainContent = document.querySelector('.main');
 
-    menuBtn.addEventListener('click', function() {
-        menu.classList.toggle('active');
-        mainContent.classList.toggle('active');
+        menuBtn.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            mainContent.classList.toggle('active');
     });
 
-    //  tarefas e grafico
-
+    // Tarefas e gráfico
     const taskForm = document.getElementById('taskForm');
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
@@ -65,21 +73,17 @@ document.addEventListener("DOMContentLoaded", function() {
         chart.data.datasets[0].data[1] = tasks.length - completedTasks;
         chart.update();
     }
-
-    
 });
 
-// formulario de cadastro
+// verificação cad.
+
 document.getElementById('cadastro').addEventListener('submit', function(e) {
     e.preventDefault();
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
-
-
     localStorage.setItem('isRegistered', 'true');
     localStorage.setItem('userName', nome);
-
     alert('Cadastro realizado com sucesso!');
     window.location.href = 'index.html';
 });
