@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const isRegistered = localStorage.getItem('isRegistered');
     if (!isRegistered) {
-        window.location.href = 'cadastro.html';
+        window.location.href = 'index.html';
         return;
     }
 
