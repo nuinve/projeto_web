@@ -119,7 +119,7 @@ li.item_menu:hover {
 }
 
 .chart-container {
-    width: 500px; 
+    width: 100%; 
     margin: auto;
 }
 .btn-primary{
