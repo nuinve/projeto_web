@@ -119,7 +119,7 @@ li.item_menu:hover {
 }
 
 .chart-container {
-    width: 100%; 
+    width: 500px; 
     margin: auto;
 }
 .btn-primary{
@@ -151,5 +151,9 @@ li.item_menu:hover {
 
     .menu.active + .main {
         margin-left: 0;
+    }
+    .chart-container {
+        width: 100%; 
+        margin: auto;
     }
 }
