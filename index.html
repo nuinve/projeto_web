@@ -23,22 +23,20 @@
                 <form id="cadastro">
                     <div class="mb-4">
                         <label for="nome" class="form-label">Nome de usuário</label>
-                        <input type="text" class="form-control" id="nome" required>
+                        <input type="text" class="form-control" id="nome" autocomplete="username" required>
                     </div>
                     <div class="mb-4">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" autocomplete="email" required>
                     </div>
                     <div class="mb-4">
                         <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="senha" required>
+                        <input type="password" class="form-control" id="senha" autocomplete="new-password" required>
                     </div>
                     <button type="button" class="btn btn-primary btn-block" onclick="registrarUsuario()">Cadastrar</button>
                 </form>
             </div>
         </div>
     </div>
-    
-    
 </body>
 </html>
